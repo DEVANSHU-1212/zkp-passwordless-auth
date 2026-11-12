@@ -202,3 +202,4 @@ test("10. Microbenchmark Verification (< 10ms Requirement)", () => {
   assert.ok(bm.proveMs < 10, `Proving took ${bm.proveMs}ms (must be < 10ms)`);
   assert.equal(bm.securityBits, 128);
 });
+

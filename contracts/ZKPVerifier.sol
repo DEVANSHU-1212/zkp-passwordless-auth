@@ -71,3 +71,4 @@ contract ZKPAuthVerifier {
         return true;
     }
 }
+

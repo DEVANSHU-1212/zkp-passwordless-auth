@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getUserByEmail, createNonce, checkRateLimit } from "@/lib/zkp/store";
 
+export const dynamic = "force-dynamic";
+
 export async function POST(request: NextRequest): Promise<NextResponse> {
   try {
     const ip = request.headers.get("x-forwarded-for") || "127.0.0.1";
@@ -43,3 +45,4 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     return NextResponse.json({ error: message }, { status: 500 });
   }
 }
+

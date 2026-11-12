@@ -8,6 +8,8 @@ import {
 } from "@/lib/zkp/store";
 import { verifyProof } from "@/lib/zkp/crypto";
 
+export const dynamic = "force-dynamic";
+
 export async function POST(request: NextRequest): Promise<NextResponse> {
   const startTime = performance.now();
 
@@ -98,3 +100,4 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     return NextResponse.json({ error: message, latencyMs }, { status: 500 });
   }
 }
+

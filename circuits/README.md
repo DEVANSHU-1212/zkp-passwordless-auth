@@ -61,3 +61,4 @@ The client loads:
 - `build/auth_final.zkey`
 
 And computes the Groth16 proof using `snarkjs.groth16.fullProve()` in ~200-500ms on client CPU without disclosing the secret.
+

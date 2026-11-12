@@ -62,3 +62,4 @@ template AuthVerifier() {
 }
 
 component main { public [expectedCommitment, nonce] } = AuthVerifier();
+

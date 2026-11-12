@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 import { validateSession, getUserByEmail } from "@/lib/zkp/store";
 
+export const dynamic = "force-dynamic";
+
 export async function GET(request: NextRequest): Promise<NextResponse> {
   try {
     const sessionCookie = request.cookies.get("zkp_auth_session")?.value;
@@ -34,3 +36,4 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     return NextResponse.json({ error: message }, { status: 500 });
   }
 }
+
